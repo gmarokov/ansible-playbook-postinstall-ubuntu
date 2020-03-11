@@ -1,0 +1,28 @@
+---
+- name: Install apt packages
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - "git"
+    - "copyq"
+    - "gnome-tweaks"
+
+- name: Install snap packages
+  snap:
+    classic: yes
+    name:
+      - postman
+      - code
+      - firefox
+      - spotify
+      - docker
+
+- name: Install snap channelled packages
+  snap:
+    name: "{{ item.name }}"
+    channel: "{{ item.channel }}"
+    classic: yes
+  loop:
+    - { name: 'dotnet-sdk', channel: '2.1/stable'}
+    - { name: 'node', channel: '12/stable'}

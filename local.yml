@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  connection: local
+  become: yes
+  become_user: root
+  pre_tasks:
+   - name: Update system
+     apt: 
+      name: "*"
+      state: latest
+  tasks:
+   - include: tasks/packages.yml
+   
