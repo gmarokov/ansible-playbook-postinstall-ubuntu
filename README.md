@@ -1,11 +1,16 @@
 Ansible playbook: Post Ubuntu workstation installation 
 =========
-[![Build Status](https://travis-ci.org/gmarokov/ansible-playbook-postinstall-fedora.svg?branch=master)](https://travis-ci.org/gmarokov/ansible-playbook-postinstall-fedora)
+[![Build Status](https://travis-ci.com/gmarokov/ansible-playbook-postinstall-ubuntu.svg?branch=master)](https://travis-ci.com/gmarokov/ansible-playbook-postinstall-ubuntu)
+
 Post Ubuntu installation Ansible script for provisioning dev machine.
 
 ## Installation
 1. Install Ansible 
-2. Add `[localhost] 127.0.0.1` to your hosts in /etc/ansible/hosts
+2. Add entry to your hosts in `/etc/ansible/hosts`:
+```
+[localhost] 
+127.0.0.1
+```
 
 ## Usage
 `ansible-pull -U https://github.com/gmarokov/ansible-playbook-postinstall-ubuntu.git -e become-pass=your-sudo-pass`
@@ -27,6 +32,6 @@ Post Ubuntu installation Ansible script for provisioning dev machine.
 - Postman
 - .NET Core SDK 2.1
 - Node.js 12
-- Firefox
 - Docker
+- Firefox
 - Spotify
