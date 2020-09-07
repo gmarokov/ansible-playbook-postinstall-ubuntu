@@ -6,14 +6,19 @@ Post Ubuntu installation Ansible script for provisioning dev machine.
 
 ## Installation
 1. Install Ansible 
+`sudo dnf install ansible`
 2. Add entry to your hosts in `/etc/ansible/hosts`:
 ```
+cat <<EOT >> /etc/ansible/hosts
 [localhost] 
 127.0.0.1
+EOT
 ```
+3. Become root:
+`sudo -i`
 
 ## Usage
-`ansible-pull -U https://github.com/gmarokov/ansible-playbook-postinstall-ubuntu.git -e become-pass=your-sudo-pass`
+1. Run the following command to pull and run the playbook: `ansible-pull -U https://github.com/gmarokov/ansible-playbook-postinstall-ubuntu.git`
 
 ## Script details 
 
@@ -27,10 +32,10 @@ Post Ubuntu installation Ansible script for provisioning dev machine.
 - CopyQ
 - Gnome Tweaks
 
-#### Install snap packages
+#### Install Snap packages
 - Visual Studio Code
 - Postman
-- .NET Core SDK 2.1
+- Dotnet SDK 2.1
 - Node.js 12
 - Docker
 - Firefox

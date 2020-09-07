@@ -8,7 +8,7 @@
     - "copyq"
     - "gnome-tweaks"
 
-- name: Install snap packages
+- name: Install Snap packages with --classic flag
   snap:
     classic: yes
     name:
@@ -18,7 +18,7 @@
       - spotify
       - docker
 
-- name: Install snap channelled packages
+- name: Install Snap packages with --channel flag
   snap:
     name: "{{ item.name }}"
     channel: "{{ item.channel }}"
