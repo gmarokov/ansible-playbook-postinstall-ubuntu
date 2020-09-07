@@ -6,7 +6,7 @@ Post Ubuntu installation Ansible script for provisioning dev machine.
 
 ## Installation
 1. Install Ansible: 
-`sudo dnf install ansible`
+`sudo apt-get install ansible`
 2. Add entry for localhost to your Ansible hosts file:
 ```
 cat <<EOT >> /etc/ansible/hosts
