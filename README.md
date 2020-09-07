@@ -5,9 +5,9 @@ Ansible playbook: Post Ubuntu workstation installation
 Post Ubuntu installation Ansible script for provisioning dev machine.
 
 ## Installation
-1. Install Ansible 
+1. Install Ansible: 
 `sudo dnf install ansible`
-2. Add entry to your hosts in `/etc/ansible/hosts`:
+2. Add entry for localhost to your Ansible hosts file:
 ```
 cat <<EOT >> /etc/ansible/hosts
 [localhost] 
